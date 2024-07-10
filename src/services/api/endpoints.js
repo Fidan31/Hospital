@@ -1,8 +1,9 @@
 
+
 const loginEndpoints = {
-    login: "api/account/login/",
-    refresh:"/api/account/refresh/",
-    user:"api/account/user/",
+    signIn: "api/account/login/",
+    refresh:"api/account/refresh/",
+    currentUser:"api/account/user/",
 }
 
 const hospitalsEndpoints = {

@@ -5,7 +5,7 @@ import { useForm, FormProvider } from "react-hook-form";
 
 
 
-const Hospitals = () => {
+const Services = () => {
   const methods = useForm();
 
   return (
@@ -15,4 +15,4 @@ const Hospitals = () => {
     </FormProvider>
   );
 };
-export default Hospitals;
+export default Services;

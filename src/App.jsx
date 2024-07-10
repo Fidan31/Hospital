@@ -1,8 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./pages/login/Login";
-import Hospitals from "./pages/hospitals/Hospitals";
-import ProtectedRoute from "./pages/login/ProtectedRoute";
+
+import { RouterProvider } from "react-router-dom";
+import { router } from "@/routes";
+
 
 
 // const App = () => {
@@ -19,25 +19,11 @@ import ProtectedRoute from "./pages/login/ProtectedRoute";
 //   );
 // };
 
-function App() {
+export default function App() {
   return (
-    
-      <Router>
-        <Routes>
-          <Route path="" element={<Login />} />
-          <Route
-            path="/hospitals"
-            element={
-              <ProtectedRoute>
-                <Hospitals />
-              </ProtectedRoute>
-            }
-          />
-          {/* Добавьте другие маршруты */}
-        </Routes>
-      </Router>
-  
+    <>
+      <RouterProvider router={router} />
+      {/* <Toaster /> */}
+    </>
   );
 }
-
-export default App;
