@@ -76,14 +76,21 @@
 
 import { Navigate, Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import Login from "@/pages/login";
+import Layout from "./components/layout/layout";
+
 import Persist from "@/components/persist/persist";
 import useAuthStore from "@/services/store/Authstore";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="*" element={<Navigate to="/login" replace />} />
+      <Route path="*"
+       element={<Navigate to="/login" replace />} />
       <Route element={<Persist />}>
+      <Route element={<Layout />}>
+          {/* <Route index element={<Hospitals />} /> */}
+          {/* <Route path="/services" element={<Services />} /> */}
+        </Route>
         {/* Add your authenticated routes here */}
       </Route>
       <Route

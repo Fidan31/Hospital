@@ -155,9 +155,9 @@ export default function SignInForm() {
     console.log(values);
   }
 
-  useEffect(() => {
-    console.log("user", user);
-  }, [user]);
+  // useEffect(() => {
+  //   console.log("user", user);
+  // }, [user]);
 
   return (
        <div className="flex h-screen">
